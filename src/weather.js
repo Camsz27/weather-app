@@ -1,10 +1,12 @@
-require('dotenv').config();
-const key = process.env.API_KEY_WEATHER;
+//require('dotenv-webpack').config();
+//const key = process.env.API_KEY_WEATHER;
+
+const key = '70070eb1a20a2232bd83f25cecb92701';
 
 const Weather = async (city) => {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY_WEATHER}`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${key}`,
       { mode: 'cors' }
     );
     const data = await response.json();

@@ -4,9 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../src/Images/cloudy.png"
+      type="image/x-icon"
+    />
     <title>Weather App</title>
   </head>
   <body>
+    <div class="content">
+      <section class="main">
+        <h2>Sunny</h2>
+        <h2>New York, US</h2>
+        <h1>16°C</h1>
+        <h3>Monday | Sept 24 | 12:30pm</h3>
+      </section>
+      <section class="extraInfo">
+        <form action="" onsubmit="">
+          <div class="location">
+            <input type="text" placeholder="Type Location" />
+          </div>
+          <div class="units">
+            <h3>Units</h3>
+            <div class="celsius">
+              <input type="radio" id="celsius" />
+              <label for="celsius">°C</label>
+            </div>
+            <div class="fahrenheit">
+              <input type="radio" id="fahrenheit" />
+              <label for="fahrenheit">°F</label>
+            </div>
+          </div>
+          <div class="feels">
+            <h3>Feels Like</h3>
+            <h3>22°C</h3>
+          </div>
+          <div class="humidity">
+            <h3>Humidity</h3>
+            <h3>80%</h3>
+          </div>
+          <div class="wind">
+            <h3>Wind Speed</h3>
+            <h3>25km/h</h3>
+          </div>
+        </form>
+      </section>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

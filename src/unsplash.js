@@ -1,5 +1,4 @@
-const key = process.env.API_KEY_PICTURE;
-
+const key = 'tr1CYsfeIQGgLaK3S7_aQj5zoKV4E7rYZ6qRRbBdk34';
 const picture = async (city) => {
   try {
     const response = await fetch(
