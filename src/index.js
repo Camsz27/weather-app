@@ -1,8 +1,9 @@
 import './input.scss';
 import { gatherInfo } from './weather';
 import { gatherPicture } from './unsplash';
-
-// api key 70070eb1a20a2232bd83f25cecb92701
+import { changeExtra, changeMain } from './domManipulation';
 
 gatherInfo('Bogota');
 gatherPicture('Bogota');
+changeMain('Cloudy', 'Bogota', 'CO', '30', 'This is');
+changeExtra('45', '85', '3');
