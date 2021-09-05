@@ -1,8 +1,8 @@
 import './input.scss';
-import Weather from './weather';
+import { gatherInfo } from './weather';
+import { gatherPicture } from './unsplash';
 
 // api key 70070eb1a20a2232bd83f25cecb92701
 
-let city = 'New York';
-
-Weather(city);
+gatherInfo('Bogota');
+gatherPicture('Bogota');
