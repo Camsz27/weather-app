@@ -15,7 +15,6 @@ const picture = async (city) => {
 
 async function gatherPicture(city) {
   let info = await picture(city);
-  console.log(info);
 }
 
-export { gatherPicture };
+export { gatherPicture, picture };
