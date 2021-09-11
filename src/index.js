@@ -1,6 +1,6 @@
 import './input.scss';
-import { gatherInfo, Weather } from './weather';
-import { gatherPicture, picture } from './unsplash';
+import { Weather } from './weather';
+import { picture } from './unsplash';
 import { changeExtra, changeImage, changeMain } from './domManipulation';
 import { locationInput, unitsInput } from './input';
 
@@ -35,9 +35,9 @@ const newLocation = () => {
 const location = document.querySelector('.location button');
 location.addEventListener('click', newLocation);
 
-const units = document.querySelectorAll('input[type="radio"]');
-units.forEach((radioButton) =>
+const radioButtons = document.querySelectorAll('input[type="radio"]');
+radioButtons.forEach((radioButton) =>
   radioButton.addEventListener('click', unitsInput)
 );
 
-changeDisplay('New York');
+changeDisplay('Miami');

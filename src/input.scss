@@ -92,7 +92,7 @@ button {
   cursor: pointer;
 }
 
-@media screen and (min-device-width: 840px) {
+@media screen and (min-device-width: 938px) {
   .content {
     display: flex;
     .main {
@@ -100,7 +100,6 @@ button {
       height: 100vh;
       justify-content: center;
       text-align: center;
-      //margin-left: 5%;
       h1 {
         font-size: 6rem;
       }
@@ -146,6 +145,30 @@ button {
   .location {
     input {
       width: 70%;
+    }
+  }
+}
+
+@media screen and (min-device-width: 490px) {
+  .main {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 2.2rem;
+    }
+    .clouds {
+      font-size: 1.5rem;
+    }
+  }
+  .extraInfo {
+    form {
+      width: 50%;
+      margin: auto;
+      min-width: 480px;
     }
   }
 }
