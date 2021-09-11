@@ -12,8 +12,11 @@ const changeMain = (cloudStatus, city, country, temp, time) => {
   temperature.textContent = `${temp}°C`;
 
   const date = new Date();
+  const localDate = new Date(
+    date.getTime() + time * 1000 + date.getTimezoneOffset() * 60 * 1000
+  );
   const dateDisplay = document.querySelector('.date');
-  dateDisplay.textContent = new Date().toLocaleDateString(undefined, {
+  dateDisplay.textContent = localDate.toLocaleDateString(undefined, {
     weekday: 'long',
     year: 'numeric',
     month: 'short',
@@ -24,9 +27,7 @@ const changeMain = (cloudStatus, city, country, temp, time) => {
   timeDisplay.textContent = new Intl.DateTimeFormat('en-US', {
     hour: 'numeric',
     minute: 'numeric',
-    timeZoneName: 'short',
-    timeZone: 'America/New_York',
-  }).format(date);
+  }).format(localDate);
 };
 
 const changeExtra = (feels, humidity, windSpeed) => {
