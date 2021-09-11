@@ -2,7 +2,6 @@ import './input.scss';
 import { gatherInfo, Weather } from './weather';
 import { gatherPicture, picture } from './unsplash';
 import { changeExtra, changeImage, changeMain } from './domManipulation';
-import { imperialToMetric, metricToImperial } from './units';
 import { locationInput, unitsInput } from './input';
 
 const getInfo = async (city) => {

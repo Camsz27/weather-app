@@ -1,3 +1,5 @@
+import { imperialToMetric, metricToImperial } from './units';
+
 const locationInput = () => {
   const input = document.querySelector('.location input');
   const location = input.value;
@@ -6,7 +8,12 @@ const locationInput = () => {
 };
 
 const unitsInput = (e) => {
-  console.log(e.target);
+  if (e.target.id === 'fahrenheit') {
+    metricToImperial();
+  }
+  if (e.target.id === 'celsius') {
+    imperialToMetric();
+  }
 };
 
 export { locationInput, unitsInput };

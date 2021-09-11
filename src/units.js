@@ -1,4 +1,4 @@
-const metricToImperial = () => {
+const imperialToMetric = () => {
   const temp = document.querySelector('.temperature');
   let tempValue = ((Number(temp.textContent.slice(0, -2)) - 32) * 5) / 9;
   temp.textContent = `${tempValue.toFixed(2)}°C`;
@@ -13,7 +13,7 @@ const metricToImperial = () => {
   feel.textContent = `${feelValue.toFixed(2)}°C`;
 };
 
-const imperialToMetric = () => {
+const metricToImperial = () => {
   const temp = document.querySelector('.temperature');
   let tempValue = (Number(temp.textContent.slice(0, -2)) * 9) / 5 + 32;
   temp.textContent = `${tempValue.toFixed(2)}°F`;
