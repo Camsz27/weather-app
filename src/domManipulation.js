@@ -44,6 +44,7 @@ const changeExtra = (feels, humidity, windSpeed) => {
 const changeImage = (url) => {
   const backgroundImage = document.querySelector('.main');
   backgroundImage.style.background = `no-repeat center/100% url('${url}&w=1600&dpr=2')`;
+  backgroundImage.style.filter = 'grayscale(0%)';
 };
 
 export { changeMain, changeExtra, changeImage };

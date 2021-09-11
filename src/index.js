@@ -40,4 +40,4 @@ units.forEach((radioButton) =>
   radioButton.addEventListener('click', unitsInput)
 );
 
-changeDisplay('Tokyo');
+changeDisplay('New York');
