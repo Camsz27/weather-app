@@ -26,6 +26,10 @@ const changeDisplay = async (city) => {
   );
   changeExtra(info.feelsLike, info.humidity, info.windSpeed);
   changeImage(picture);
+  const activeRadio = document.querySelector('#celsius');
+  activeRadio.checked = true;
+  const radioButton = document.querySelector('#fahrenheit');
+  radioButton.addEventListener('click', unitsInput);
 };
 
 const newLocation = () => {
@@ -34,10 +38,5 @@ const newLocation = () => {
 
 const location = document.querySelector('.location button');
 location.addEventListener('click', newLocation);
-
-const radioButtons = document.querySelectorAll('input[type="radio"]');
-radioButtons.forEach((radioButton) =>
-  radioButton.addEventListener('click', unitsInput)
-);
 
 changeDisplay('Miami');

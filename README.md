@@ -1,12 +1,12 @@
 # Weather App
 
-A weather app using the API of OpenWeather and Unsplash
+A weather app that shows the weather information of the location entered and also an image of the place. Using the API of OpenWeather and Unsplash.
 
 ## Live Demo
 
 [Click Here](https://camsz27.github.io/weather-app/)
 
-![Preview of the landing page](./Images/preview.png 'The Next Web')
+![Preview of the landing page](./src/preview.png 'The Next Web')
 
 ## Description
 
