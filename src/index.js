@@ -3,6 +3,7 @@ import { gatherInfo, Weather } from './weather';
 import { gatherPicture, picture } from './unsplash';
 import { changeExtra, changeImage, changeMain } from './domManipulation';
 import { imperialToMetric, metricToImperial } from './units';
+import { locationInput, unitsInput } from './input';
 
 const getInfo = async (city) => {
   const info = await Weather(city);
@@ -17,8 +18,6 @@ const getPicture = async (city) => {
 const changeDisplay = async (city) => {
   const info = await getInfo(city);
   const picture = await getPicture(city);
-  console.log(info);
-  console.log(picture);
   changeMain(
     info.clouds,
     info.location,
@@ -28,7 +27,18 @@ const changeDisplay = async (city) => {
   );
   changeExtra(info.feelsLike, info.humidity, info.windSpeed);
   changeImage(picture);
-  imperialToMetric();
 };
+
+const newLocation = () => {
+  changeDisplay(locationInput());
+};
+
+const location = document.querySelector('.location button');
+location.addEventListener('click', newLocation);
+
+const units = document.querySelectorAll('input[type="radio"]');
+units.forEach((radioButton) =>
+  radioButton.addEventListener('click', unitsInput)
+);
 
 changeDisplay('Berlin');
