@@ -1,6 +1,3 @@
-//require('dotenv-webpack').config();
-//const key = process.env.API_KEY_WEATHER;
-
 const key = '70070eb1a20a2232bd83f25cecb92701';
 
 const Weather = async (city) => {
@@ -35,8 +32,4 @@ const Weather = async (city) => {
   }
 };
 
-async function gatherInfo(city) {
-  let info = await Weather(city);
-}
-
-export { gatherInfo, Weather };
+export { Weather };

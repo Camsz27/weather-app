@@ -20,6 +20,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   color: #fff;
   h1 {
     font-size: 4rem;
@@ -38,7 +40,7 @@ body {
   }
 }
 
-.main::after {
+.main::before {
   content: '';
   background: no-repeat center/100% contain url(./Images/demo.jpeg);
   opacity: 0.7;
@@ -50,6 +52,7 @@ body {
   right: 0;
   position: absolute;
   z-index: -1;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .location input {
@@ -57,6 +60,7 @@ body {
   border: none;
   font-size: 1.5rem;
   accent-color: $secondary;
+  color: #fff;
 }
 
 .celsius,
@@ -81,4 +85,56 @@ body {
   margin: 1em auto;
   border-bottom: 1px solid $secondary;
   color: rgba($color: #fff, $alpha: 0.7);
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-device-width: 840px) {
+  .content {
+    display: flex;
+    .main {
+      width: 70%;
+      height: 100vh;
+      justify-content: center;
+      text-align: center;
+      //margin-left: 5%;
+      h1 {
+        font-size: 6rem;
+      }
+      h2 {
+        font-size: 4.5rem;
+      }
+      h3 {
+        font-size: 3.2rem;
+      }
+      .clouds {
+        font-size: 4rem;
+      }
+    }
+    .extraInfo {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      form {
+        padding-left: 5rem;
+        .humidity,
+        .feels,
+        .wind,
+        .units,
+        .location {
+          margin: 4rem 0;
+        }
+      }
+    }
+  }
+  .location {
+    input {
+      width: 70%;
+    }
+  }
 }

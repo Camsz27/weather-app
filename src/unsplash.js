@@ -9,12 +9,8 @@ const picture = async (city) => {
 
     return data.results[0].urls.raw;
   } catch (error) {
-    return 'City was not found';
+    return 'Photo was not found';
   }
 };
 
-async function gatherPicture(city) {
-  let info = await picture(city);
-}
-
-export { gatherPicture, picture };
+export { picture };
