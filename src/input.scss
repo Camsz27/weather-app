@@ -172,3 +172,11 @@ button {
     }
   }
 }
+
+@media screen and (max-device-width: 360px) {
+  .location {
+    input {
+      width: 70%;
+    }
+  }
+}
